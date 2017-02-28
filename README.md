@@ -31,3 +31,13 @@ npm run build --report
 ```
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+## IDE option
+
+本项目使用`ESlint`统一规范JS, 但未置入`webpack`配置中, 只做本地纠错提示
+
+推荐安装`ESlint`并使用 `VS code`编辑器等支持`ESlint`的IDE
+
+## 任务列表
+
+- [ ] 登录页 - `Login.vue`

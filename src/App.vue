@@ -2,12 +2,10 @@
 #app
     img( src="./assets/logo.png" )
     br
-    i( class="el-icon-edit" )
-    br
-    i.material-icons call
-    br
     i.material-icons ring_volume
+    h1 material-icons图标
     br
+    h1( v-bind:style=" { fontSize: '50px' } " ) 表格
     router-view
 </template>
 
