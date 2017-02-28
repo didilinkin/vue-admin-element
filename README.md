@@ -17,16 +17,16 @@
 ## Build Setup
 
 ``` bash
-# install dependencies
+#安装依赖
 npm install
 
-# serve with hot reload at localhost:8080
+# 在localhost:8080 开启热加载功能
 npm run dev
 
-# build for production with minification
+# 打包生产模式,缩小压缩包
 npm run build
 
-# build for production and view the bundle analyzer report
+# 打包生产模式,缩小压缩包 -- 查看包分析报告
 npm run build --report
 ```
 
