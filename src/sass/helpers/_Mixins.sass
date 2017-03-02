@@ -21,6 +21,9 @@
     width: $width
     height: $height
 
+=minH( $min-height )
+    min-height: $min-height
+
 =fS( $fontSize )
     font-size: $fontSize
 
@@ -106,11 +109,21 @@
 =textCenter
     text-align: center
 
+// 清除浮动
+=overflow
+    overflow: hidden
+
 =REL
     position: relative
 
 =ABS
     position: absolute
+
+=floatL
+    float: left
+
+=floatR
+    float: right
 
 =block
     display: block
@@ -126,6 +139,9 @@
 // 全宽
 =W100
     width: 100%
+// 全高
+=H100
+    height: 100%
 
 // 椭圆按钮( 有阴影 )
 =ellipseBtn
