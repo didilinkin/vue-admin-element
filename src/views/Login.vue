@@ -19,14 +19,14 @@ el-form.demo-ruleForm( v-bind:model="ruleForm" v-bind:rules="rules" ref="ruleFor
 <script>
 export default {
     data() {
-        var validatePass = (rule, value, callback) => {
-            if (value === '') {
-                callback(new Error('请输入密码'));
+        var validatePass = ( rule, value, callback ) => {
+            if ( value === '' ) {
+                callback( new Error( '请输入密码' ) );
             } else {
-                if (this.ruleForm.checkPass !== '') {
-                    this.$refs.ruleForm.validateField('checkPass');
+                if ( this.ruleForm.checkPass !== '' ) {
+                    this.$refs.ruleForm.validateField( 'checkPass' )
                 }
-                callback();
+                callback()
             }
         }
         return {
@@ -70,7 +70,7 @@ export default {
                     }
                 })
             },
-            resetForm(formName) {
+            resetForm( formName ) {
                 this.$refs[formName].resetFields()
             }
         }

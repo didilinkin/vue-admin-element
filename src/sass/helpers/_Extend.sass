@@ -1,0 +1,25 @@
+@charset "utf-8"
+// 继承
+@import "./Color"
+@import "./Font"
+@import "./Var"
+
+// 去除滚动条
+%clearScroll
+    overflow: scroll
+    overflow-y: hidden
+    overflow-x: hidden
+// flex换行
+%flexWrap
+    display: -webkit-flex
+    -webkit-flex-wrap: wrap
+    display: flex
+    flex-wrap: wrap
+// 去除边框
+%delBorder
+    border: none
+    zoom: 1
+    outline: medium
+// 文本两侧对齐
+%justify
+    text-align: justify

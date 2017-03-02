@@ -16,6 +16,9 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+@import './sass/main'
+@import './sass/vendors/Element'
+
 #app
     text-align: center
     color: #2c3e50
