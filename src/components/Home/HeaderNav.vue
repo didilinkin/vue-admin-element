@@ -50,16 +50,15 @@ export default {
 @import '../../sass/main'
 
 #headerNav
-    +overflow
-    height: inherit
-    *zoom: 1
+    position: fixed
+    +W100
     .headerNav--logo
         +floatL
         +flexCenter
         +w-h( $sidebarWidth, $headerNavHeight )
         +bC( $C-theme )
         >h3
-            +fS( $F-title )
+            +fS( $F-info )
             color: $F
     .headerNav--menu
         +mL( $sidebarWidth )
