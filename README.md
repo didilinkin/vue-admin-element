@@ -14,7 +14,7 @@
 | [Sass](http://www.sass-zh.com/)                                                                   | 样式预处理            |  4.5.0  |
 | [Webpack](http://webpackdoc.com/)                                                                 | 模块打包              |  2.2.1  |
 | [Yarn](https://yarnpkg.com/zh-Hans/)                                                              | 依赖管理              |  0.20.3  |
-
+| [Google Material-Icons](https://material.io/icons/)                                               | 图标字体              |  2.1.3  |
 ## Build Setup
 
 ``` bash
