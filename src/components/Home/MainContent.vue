@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import Sidebar                  from '@/components/Home/Sidebar'
+import Sidebar                  from '@/components/Home/MainContent/Sidebar'
 const components = { Sidebar }
 
 export default {

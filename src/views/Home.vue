@@ -1,13 +1,13 @@
 <template lang="pug">
 #home
     HeaderNav
-    Main
+    MainContent
 </template>
 
 <script>
 import HeaderNav                from '@/components/Home/HeaderNav'
-import Main                     from '@/components/Home/Main'
-const components = { HeaderNav, Main }
+import MainContent                     from '@/components/Home/MainContent'
+const components = { HeaderNav, MainContent }
 
 export default {
     components: components
