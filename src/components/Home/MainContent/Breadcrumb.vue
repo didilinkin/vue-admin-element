@@ -5,24 +5,22 @@
         el-breadcrumb-item 活动管理
         el-breadcrumb-item 活动列表
         el-breadcrumb-item 活动详情
-    h1 {{ testState }}
 </template>
 
 <script>
 import  { mapGetters }  from    'vuex'
 export default{
     mounted: function() {
-        this.testFunction()
+        // this.testFunction()
     },
     methods: {
         // 测试Getters是否获取到数据
-        testFunction() {
-            // console.log( this.$store.state.viewState.testState )
-        }
+        // testFunction() {
+        //     // console.log( this.$store.state.viewState.testState )
+        // }
     },
     computed: mapGetters({
-        breadcrumbLevel     : 'breadcrumbLevel',
-        testState           : 'testState'   // 测试Getters是否获取到数据
+        breadcrumbLevel     : 'breadcrumbLevel'
     })
 }
 </script>

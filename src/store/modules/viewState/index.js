@@ -1,4 +1,6 @@
-import * as types from './mutation-types'
+import actions      from './actions'
+import mutations    from './mutations'
+import * as types   from './mutation-types'
 
 // 该模块的初始状态
 const state = {
@@ -8,10 +10,25 @@ const state = {
         {
             levelName: '收费管理'
         }
-    ],
-    testState: 'AAAAA'
+    ]
 }
 
+
+
+// 临时将actions 放置在模块内部
+// actions
+// const actions = {
+//     setBreadcrumbLevel: ( { commit }, obj ) => {
+//         // commit(types.SET_BREADCRUMB_LEVEL, obj)
+//         console.log( Obj )
+//     }
+// }
+
+// 临时将mutations 放置在模块内部
+// 相关的 mutations
+
 export default {
-    state
+    state,
+    actions,
+    mutations
 }
