@@ -40,7 +40,7 @@ export default {
     },
     methods: {
         handleSelect( key, keyPath ) {
-            console.log( key, keyPath )
+            // console.log( key, keyPath )
         }
     }
 }
@@ -52,18 +52,19 @@ export default {
 #headerNav
     position: fixed
     +W100
+    z-index: 2
     .headerNav--logo
         +floatL
         +flexCenter
-        +w-h( $sidebarWidth, $headerNavHeight )
+        +w-h( $D-sidebarWidth, $D-headerNavHeight )
         +bC( $C-theme )
         >h3
             +fS( $F-info )
             color: $F
     .headerNav--menu
-        +mL( $sidebarWidth )
+        +mL( $D-sidebarWidth )
         min-width: 760px
-        height: $headerNavHeight
+        height: $D-headerNavHeight
         .el-menu
             display: flex
             justify-content: flex-end
