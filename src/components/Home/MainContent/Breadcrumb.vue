@@ -1,32 +1,52 @@
 <template lang="pug">
 #Breadcrumb
     el-breadcrumb( separator="/" )
-        el-breadcrumb-item( v-bind:to="{ path: '/' }" ) 首页
-        el-breadcrumb-item 活动管理
-        el-breadcrumb-item 活动列表
-        el-breadcrumb-item 活动详情
+        span.el-breadcrumb__item( v-bind:to="{ path: '/' }" )
+            span.el-breadcrumb__item__inner 首页
+            span.el-breadcrumb__separator /
+
+        // 未添加 v-bind:to="跳转地址"
+        span.el-breadcrumb__item( v-for="item in breadcrumbLevelArr" class="breadcrumb--links" )
+            span.el-breadcrumb__item__inner( class="breadcrumb--title" ) {{ item.levelName }}
+            span.el-breadcrumb__separator /
 </template>
 
 <script>
 import  { mapGetters }  from    'vuex'
 export default{
+    data() {
+        return {
+            breadcrumbLevelArr : []
+        }
+    },
     mounted: function() {
-        // this.testFunction()
+        this.initBreadcrumbLevel()
     },
     methods: {
-        // 测试Getters是否获取到数据
-        // testFunction() {
-        //     // console.log( this.$store.state.viewState.testState )
-        // }
+        // 目的: 初始化面包屑状态
+        initBreadcrumbLevel() {
+            this.$data.breadcrumbLevelArr = this.$store.state.viewState.breadcrumbLevel
+        }
     },
     computed: mapGetters({
         breadcrumbLevel     : 'breadcrumbLevel'
-    })
+    }),
+    watch: {
+        // 监听: 面包屑状态 是否改变
+        breadcrumbLevel: function() {
+            this.$data.breadcrumbLevelArr = this.$store.state.viewState.breadcrumbLevel
+        }
+    }
 }
 </script>
 
 <style lang="sass" scoped>
 @import '../../../sass/main'
 
-#Breadcrumb   
+#Breadcrumb
+    .breadcrumb--links
+        &:last-child
+            >span.breadcrumb--title
+                color: $C-theme
+                cursor: pointer
 </style>

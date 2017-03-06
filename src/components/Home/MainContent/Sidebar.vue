@@ -141,38 +141,19 @@ export default {
         },
         // 目的: 改变面包屑层级状态( 缺省参数 )
         setBreadcrumbLevel() {
-            let firstLevel      = arguments[0]?arguments[0]:'',         // 1级名称
-                middleLevel     = arguments[1]?arguments[1]:'',         // 2级名称
-                lastLevel       = arguments[2]?arguments[2]:'',         // 3级名称
-                argumentsLength = arguments.length                      // 参数个数
-            
-            let argumentsObj    = new Object                            // 存放参数对象( 触发actions )
-            
-            // 判断面包屑级别
-            if( argumentsLength == 3 ) {
-                // 设置参数对象
-                argumentsObj.firstLevel     = firstLevel
-                argumentsObj.middleLevel    = middleLevel
-                argumentsObj.lastLevel      = lastLevel
-                // 派发任务( 将argumentsObj对象发给actions )
-                this.$store.dispatch({
-                    type    : 'setBreadcrumbLevel',
-                    attrObj : argumentsObj
-                })
-            } else {
-                // 设置参数对象
-                argumentsObj.firstLevel     = firstLevel
-                argumentsObj.middleLevel    = middleLevel
-                // 派发任务( 将argumentsObj对象发给actions )
-                this.$store.dispatch({
-                    type    : 'setBreadcrumbLevel',
-                    attrObj : argumentsObj
-                })
+            let argumentsLength = arguments.length,                         // 参数个数
+                argumentsArr    = []                                        // 存放参数对象( 作为参数: 触发actions事件 )
+
+            for( let i=0; i<argumentsLength; i++ ) {
+                let argumentsObj    = new Object
+                argumentsObj['levelName'] = arguments[i]
+                argumentsArr.push( argumentsObj )
             }
-        },
-        // 测试点击事件
-        logMsg( msg ) {
-            console.log( msg )
+            // 派发任务( 将argumentsObj对象发给actions )
+            this.$store.dispatch({
+                type    : 'setBreadcrumbLevel',
+                attrObj : argumentsArr
+            })
         }
     }
 }

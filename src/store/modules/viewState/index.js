@@ -9,11 +9,15 @@ const state = {
     breadcrumbLevel: [
         {
             levelName: '收费管理'
+        },
+        {
+            levelName: '租金管理'
+        },
+        {
+            levelName: '应收查询'
         }
     ]
 }
-
-
 
 // 临时将actions 放置在模块内部
 // actions

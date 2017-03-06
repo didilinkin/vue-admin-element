@@ -27,7 +27,6 @@
                 el-menu-item( index="3-1" ) 个人设置
                 el-menu-item( index="3-2" ) 修改密码
                 el-menu-item( index="3-3" ) 安全退出
-
 </template>
 
 <script>
@@ -51,8 +50,8 @@ export default {
 
 #headerNav
     position: fixed
-    +W100
     z-index: 2
+    +W100
     .headerNav--logo
         +floatL
         +flexCenter
