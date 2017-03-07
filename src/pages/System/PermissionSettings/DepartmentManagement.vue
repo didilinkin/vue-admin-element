@@ -1,4 +1,4 @@
-// 水费记录
+// 部门管理
 <template lang="pug">
-h1 水费记录
+h1 部门管理
 </template>

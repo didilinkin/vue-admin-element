@@ -1,4 +1,4 @@
-// 水费记录
+// 合同管理
 <template lang="pug">
-h1 水费记录
+h1 合同管理
 </template>

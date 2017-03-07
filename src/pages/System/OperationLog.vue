@@ -1,4 +1,4 @@
-// 水费记录
+// 操作日志
 <template lang="pug">
-h1 水费记录
+h1 操作日志
 </template>

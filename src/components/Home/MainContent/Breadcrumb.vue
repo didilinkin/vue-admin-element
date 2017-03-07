@@ -1,12 +1,12 @@
 <template lang="pug">
 #Breadcrumb
     el-breadcrumb( separator="/" )
-        span.el-breadcrumb__item( v-bind:to="{ path: '/' }" )
+        span.el-breadcrumb__item.breadcrumb--links( v-bind:to="{ path: '/' }" )
             span.el-breadcrumb__item__inner 首页
             span.el-breadcrumb__separator /
 
         // 未添加 v-bind:to="跳转地址"
-        span.el-breadcrumb__item( v-for="item in breadcrumbLevelArr" class="breadcrumb--links" )
+        span.el-breadcrumb__item.breadcrumb--links( v-for="item in breadcrumbLevelArr" )
             span.el-breadcrumb__item__inner( class="breadcrumb--title" ) {{ item.levelName }}
             span.el-breadcrumb__separator /
 </template>
@@ -44,7 +44,10 @@ export default{
 @import '../../../sass/main'
 
 #Breadcrumb
+    +mB( $D-mainContainerPadding/2 )
+    height: $D-mainContainerPadding
     .breadcrumb--links
+        +fS( $F-info )
         &:last-child
             >span.breadcrumb--title
                 color: $C-theme

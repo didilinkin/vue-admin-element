@@ -1,4 +1,4 @@
-// 水费记录
+// 数据字典
 <template lang="pug">
-h1 水费记录
+h1 数据字典
 </template>

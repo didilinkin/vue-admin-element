@@ -115,13 +115,10 @@
                 el-menu-item( index="5-1-2" @click="setBreadcrumbLevel( '系统设置', '权限管理', '部门管理' )" ) 部门管理
 
             el-menu-item-group
-                el-menu-item( index="5-2" @click="setBreadcrumbLevel( '系统设置', '登录帐号' )" ) 登录帐号
+                el-menu-item( index="5-2" @click="setBreadcrumbLevel( '系统设置', '数据字典' )" ) 数据字典
 
             el-menu-item-group
-                el-menu-item( index="5-3" @click="setBreadcrumbLevel( '系统设置', '数据字典' )" ) 数据字典
-
-            el-menu-item-group
-                el-menu-item( index="5-4" @click="setBreadcrumbLevel( '系统设置', '操作日志' )" ) 操作日志
+                el-menu-item( index="5-3" @click="setBreadcrumbLevel( '系统设置', '操作日志' )" ) 操作日志
     // 技术支持
     .copyright 青岛上朝科技
 </template>

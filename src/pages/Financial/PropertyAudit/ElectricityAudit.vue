@@ -1,4 +1,4 @@
-// 水费记录
+// 电费审核
 <template lang="pug">
-h1 水费记录
+h1 电费审核
 </template>

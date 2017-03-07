@@ -1,4 +1,4 @@
-// 水费记录
+// 抄表水费
 <template lang="pug">
-h1 水费记录
+h1 抄表水费
 </template>

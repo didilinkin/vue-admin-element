@@ -1,4 +1,4 @@
-// 水费记录
+// 注册信息
 <template lang="pug">
-h1 水费记录
+h1 注册信息
 </template>

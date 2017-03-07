@@ -1,4 +1,4 @@
-// 水费记录
+// 收费设置
 <template lang="pug">
-h1 水费记录
+h1 收费设置
 </template>

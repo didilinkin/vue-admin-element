@@ -1,4 +1,4 @@
-// 水费记录
+// 房间管理
 <template lang="pug">
-h1 水费记录
+h1 房间管理
 </template>

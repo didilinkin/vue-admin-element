@@ -7,6 +7,7 @@
     // 右内容路由模版( 面包屑 + 路由内容 )
     .main--container
         Breadcrumb
+        router-view( name="ContainerView" )
 </template>
 
 <script>
