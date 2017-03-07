@@ -11,8 +11,9 @@
             // 二级导航
             el-submenu( index="1-1" )
                 template( slot="title" ) 租金管理
-                el-menu-item( index="1-1-1" @click="setBreadcrumbLevel( '收费管理', '租金管理', '应收查询' )" ) 应收查询
-                el-menu-item( index="1-1-2" @click="setBreadcrumbLevel( '收费管理', '租金管理', '租金记录' )" ) 租金记录
+                // toPageUrl( '#aaa' )  测试跳转事件
+                el-menu-item( index="1-1-1" @click="setBreadcrumbLevel( '收费管理', '租金管理', '应收查询' ); toPageUrl( 'RentQuery' ) "   ) 应收查询 
+                el-menu-item( index="1-1-2" @click="setBreadcrumbLevel( '收费管理', '租金管理', '租金记录' ); toPageUrl( 'RentRecord' ) " ) 租金记录
 
             el-submenu( index="1-2" )
                 template( slot="title" ) 物业收费
@@ -151,6 +152,11 @@ export default {
                 type    : 'setBreadcrumbLevel',
                 attrObj : argumentsArr
             })
+        },
+        // 目的: 跳转url, 渲染相应的路由组件
+        toPageUrl( linkUrl ) {
+            // console.log( linkUrl )
+            location.href='#/' + linkUrl
         }
     }
 }
