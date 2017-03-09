@@ -1,0 +1,258 @@
+{
+    "resultCode": 1,
+    "resultMsg": "注册成功",
+    "resultData": [
+        {
+            "titleName": "收费管理",
+            "middle": [
+                {   
+                    "canClick"  : false,
+                    "titleName" : "租金管理",
+                    "bottom"    : [
+                        {
+                            "titleName"     : "应收查询",
+                            "url"           : "RentQuery",
+                            "breadcrumb"    : [ "收费管理", "租金管理", "应收查询" ] 
+                        }, {
+                            "titleName"     : "租金记录",
+                            "url"           : "RentRecord",
+                            "breadcrumb"    : [ "收费管理", "租金管理", "租金记录" ] 
+                        }
+                    ]
+                }, {
+                    "canClick"  : false,
+                    "titleName" : "物业收费",
+                    "bottom"    : [
+                        {
+                            "titleName"     : "物业费查询",
+                            "url"           : "PropertyQuery",
+                            "breadcrumb"    : [ "收费管理", "物业收费", "物业费查询" ] 
+                        }, {
+                            "titleName"     : "物业费记录",
+                            "url"           : "PropertyRecord",
+                            "breadcrumb"    : [ "收费管理", "物业收费", "物业费记录" ] 
+                        }
+                    ]
+                }, {
+                    "canClick"  : false,
+                    "titleName" : "抄表电费",
+                    "bottom"    : [
+                        {
+                            "titleName"     : "电费查询",
+                            "url"           : "ElectricityBillQuery",
+                            "breadcrumb"    : [ "收费管理", "抄表电费", "电费查询" ] 
+                        }, {
+                            "titleName"     : "电费记录",
+                            "url"           : "ElectricityBillRecord",
+                            "breadcrumb"    : [ "收费管理", "抄表电费", "电费记录" ] 
+                        }, {
+                            "titleName"     : "电费录入",
+                            "url"           : "ElectricityBillEntry",
+                            "breadcrumb"    : [ "收费管理", "抄表电费", "电费录入" ] 
+                        }, {
+                            "titleName"     : "峰平谷录入",
+                            "url"           : "PeakflatvalleyEntry",
+                            "breadcrumb"    : [ "收费管理", "抄表电费", "峰平谷录入" ] 
+                        }
+                    ]
+                }, {
+                    "canClick"  : false,
+                    "titleName" : "抄表水费",
+                    "bottom"    : [
+                        {
+                            "titleName"     : "水费查询",
+                            "url"           : "WaterFeeQuery",
+                            "breadcrumb"    : [ "收费管理", "抄表水费", "水费查询" ] 
+                        }, {
+                            "titleName"     : "水费记录",
+                            "url"           : "WaterFeeRecord",
+                            "breadcrumb"    : [ "收费管理", "抄表水费", "水费记录" ] 
+                        }, {
+                            "titleName"     : "水表录入",
+                            "url"           : "WaterFeeEntry",
+                            "breadcrumb"    : [ "收费管理", "抄表水费", "水费录入" ] 
+                        }
+                    ]
+                }
+            ]
+        }, {
+            "titleName": "客户管理",
+            "middle": [
+                {
+                    "canClick"  : true,
+                    "titleName" : "客户资料",
+                    "url"       : "CustomerInformation",
+                    "breadcrumb"    : [ "客户管理", "客户资料" ]
+                    
+                }, {
+                    "canClick"  : true,
+                    "titleName" : "合同管理",
+                    "url"       : "ContractManagement",
+                    "breadcrumb"    : [ "客户管理", "合同管理" ] 
+                }, {
+                    "canClick"  : true,
+                    "titleName" : "保证金管理",
+                    "url"       : "MarginManagement",
+                    "breadcrumb": [ "客户管理", "保证金管理" ]
+                }, {
+                    "canClick"  : false,
+                    "titleName" : "门禁卡管理",
+                    "bottom"    : [
+                        {
+                            "titleName"     : "门禁卡登记",
+                            "url"           : "AccessCardRegistration",
+                            "breadcrumb"    : [ "客户管理", "门禁卡管理", "门禁卡登记" ]
+                        }, {
+                            "titleName"     : "门禁卡押金",
+                            "url"           : "AccessCardDeposit",
+                            "breadcrumb"    : [ "客户管理", "门禁卡管理", "门禁卡押金" ]
+                        }
+                    ]
+                }
+            ]
+        }, {
+            "titleName": "房产管理",
+            "middle":[
+                {
+                    "canClick"  : false,
+                    "titleName" : "房间查询",
+                    "bottom"    : [
+                        {
+                            "titleName"     : "状态图示",
+                            "url"           : "StatusDisplay",
+                            "breadcrumb"    : [ "房产管理", "房间查询", "状态图示" ]
+                        }, {
+                            "titleName"     : "注册信息",
+                            "url"           : "RegistrationMessage",
+                            "breadcrumb"    : [ "房产管理", "房间查询", "注册信息" ]
+                        }
+                    ]
+                }, {
+                    "canClick"  : false,
+                    "titleName" : "房间管理",
+                    "bottom"    : [
+                        {
+                            "titleName"     : "房间管理",
+                            "url"           : "RoomManagement",
+                            "breadcrumb"    : [ "房产管理", "房间管理", "房间管理" ]
+                        }, {
+                            "titleName"     : "楼宇管理",
+                            "url"           : "BuildingManagement",
+                            "breadcrumb"    : [ "房产管理", "房间管理", "楼宇管理" ]
+                        }
+                    ]
+                }
+            ]
+        }, {
+            "titleName": "财务管理",
+            "middle": [
+                {
+                    "canClick"  : false,
+                    "titleName" : "统计报表",
+                    "bottom"    : [
+                        {
+                            "titleName"     : "租金",
+                            "url"           : "Rent",
+                            "breadcrumb"    : [ "财务管理", "统计报表", "租金" ]
+                        }, {
+                            "titleName"     : "物业费",
+                            "url"           : "PropertyCosts",
+                            "breadcrumb"    : [ "财务管理", "统计报表", "物业费" ]
+                        }, {
+                            "titleName"     : "抄表电费",
+                            "url"           : "ElectricityBill",
+                            "breadcrumb"    : [ "财务管理", "统计报表", "抄表电费" ]
+                        }, {
+                            "titleName"     : "抄表水费",
+                            "url"           : "WaterFee",
+                            "breadcrumb"    : [ "财务管理", "统计报表", "抄表水费" ]
+                        }
+                    ]
+                }, {
+                    "canClick"  : false,
+                    "titleName" : "租赁审核",
+                    "bottom"    : [
+                        {
+                            "titleName"     : "租金审核",
+                            "url"           : "RentReview",
+                            "breadcrumb"    : [ "财务管理", "租赁审核", "租金审核" ]
+                        }, {
+                            "titleName"     : "租金审核记录",
+                            "url"           : "AuditRecord",
+                            "breadcrumb"    : [ "财务管理", "租赁审核", "租金审核记录" ]
+                        }, {
+                            "titleName"     : "保证金审核",
+                            "url"           : "LeaseMarginReview",
+                            "breadcrumb"    : [ "财务管理", "租赁审核", "保证金审核" ]
+                        }
+                    ]
+                }, {
+                    "canClick"  : false,
+                    "titleName" : "物业审核",
+                    "bottom"    : [
+                        {
+                            "titleName"     : "电费审核",
+                            "url"           : "ElectricityAudit",
+                            "breadcrumb"    : [ "财务管理", "物业审核", "电费审核" ]
+                        }, {
+                            "titleName"     : "水费审核",
+                            "url"           : "WaterReview",
+                            "breadcrumb"    : [ "财务管理", "物业审核", "水费审核" ]
+                        }, {
+                            "titleName"     : "物业费审核",
+                            "url"           : "PropertyFeeAudit",
+                            "breadcrumb"    : [ "财务管理", "物业审核", "物业费审核" ]
+                        }, {
+                            "titleName"     : "保证金审核",
+                            "url"           : "PropertyMarginReview",
+                            "breadcrumb"    : [ "财务管理", "物业审核", "保证金审核" ]
+                        }
+                    ]
+                }, {
+                    "canClick"  : false,
+                    "titleName" : "财务设置",
+                    "bottom"    : [
+                        {
+                            "titleName"     : "收费设置",
+                            "url"           : "ChargeSettings",
+                            "breadcrumb"    : [ "财务管理", "财务设置", "收费设置" ]
+                        }, {
+                            "titleName"     : "开票信息",
+                            "url"           : "BillingInformation",
+                            "breadcrumb"    : [ "财务管理", "财务设置", "开票信息" ]
+                        }
+                    ]
+                }
+            ]
+        }, {
+            "titleName": "系统设置",
+            "middle": [
+                {
+                    "canClick"  : false,
+                    "titleName" : "权限管理",
+                    "bottom"    : [
+                        {
+                            "titleName"     : "角色管理",
+                            "url"           : "RoleManagement",
+                            "breadcrumb"    : [ "系统设置", "权限管理", "角色管理" ]
+                        }, {
+                            "titleName"     : "部门管理",
+                            "url"           : "DepartmentManagement",
+                            "breadcrumb"    : [ "系统设置", "权限管理", "部门管理" ]
+                        }
+                    ]
+                }, {
+                    "canClick"  : true,
+                    "titleName" : "数据字典",
+                    "url"       : "DataDictionary",
+                    "breadcrumb"    : [ "系统设置", "数据字典" ]
+                }, {
+                    "canClick"  : true,
+                    "titleName" : "操作日志",
+                    "url"       : "OperationLog",
+                    "breadcrumb"    : [ "系统设置", "操作日志" ]
+                }
+            ]
+        }
+    ]
+}

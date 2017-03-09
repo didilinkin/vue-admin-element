@@ -16,6 +16,18 @@ import Breadcrumb               from '@/components/Home/MainContent/Breadcrumb'
 const components = { Sidebar, Breadcrumb }
 
 export default {
+    mounted: function() {
+        this.getSideBarList()
+    },
+    methods: {
+        // 目的: 触发一个交互, 从后台获取侧导航列表
+        getSideBarList() {
+            this.$store.dispatch({
+                type    : 'getSideBarList'
+                // ,attrObj : argumentsArr      // 需要带上session验证账户权限信息; 测试无参数
+            })
+        }
+    },
     components: components
 }
 </script>

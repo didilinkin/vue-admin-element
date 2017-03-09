@@ -104,22 +104,22 @@
                 el-menu-item( index="4-4-2" @click="setBreadcrumbLevel( '财务管理', '财务设置', '开票信息' )" ) 开票信息
 
         // 一级导航 - 系统设置
-        el-submenu( index="5" )
+        el-submenu( index="系统设置" )
             template( slot="title" )
                 // i.el-icon-message
                 i.material-icons settings_applications
                 span 系统设置
             // 二级导航
-            el-submenu( index="5-1" )
+            el-submenu( index="权限管理" )
                 template( slot="title" ) 权限管理
-                el-menu-item( index="5-1-1" @click="setBreadcrumbLevel( '系统设置', '权限管理', '角色管理' )" ) 角色管理
-                el-menu-item( index="5-1-2" @click="setBreadcrumbLevel( '系统设置', '权限管理', '部门管理' )" ) 部门管理
+                el-menu-item( index="角色管理" @click="setBreadcrumbLevel( '系统设置', '权限管理', '角色管理' )" ) 角色管理
+                el-menu-item( index="部门管理" @click="setBreadcrumbLevel( '系统设置', '权限管理', '部门管理' )" ) 部门管理
 
             el-menu-item-group
-                el-menu-item( index="5-2" @click="setBreadcrumbLevel( '系统设置', '数据字典' )" ) 数据字典
+                el-menu-item( index="数据字典" @click="setBreadcrumbLevel( '系统设置', '数据字典' )" ) 数据字典
 
             el-menu-item-group
-                el-menu-item( index="5-3" @click="setBreadcrumbLevel( '系统设置', '操作日志' )" ) 操作日志
+                el-menu-item( index="操作日志" @click="setBreadcrumbLevel( '系统设置', '操作日志' )" ) 操作日志
     // 技术支持
     .copyright 青岛上朝科技
 </template>
@@ -155,7 +155,6 @@ export default {
         },
         // 目的: 跳转url, 渲染相应的路由组件
         toPageUrl( linkUrl ) {
-            // console.log( linkUrl )
             location.href='#/' + linkUrl
         }
     }

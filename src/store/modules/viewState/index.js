@@ -8,14 +8,14 @@ const state = {
     breadcrumbLevel: [
         {
             levelName: '收费管理'
-        },
-        {
+        }, {
             levelName: '租金管理'
-        },
-        {
+        }, {
             levelName: '应收查询'
         }
-    ]
+    ],
+    // 从后台动态获取的侧导航栏信息( 当用户登录之后, 触发交互事件 -> 获取当前用户权限允许访问的导航列表 -> 将导航列表数据存放到此处 )
+    getSideBar: []
 }
 
 export default {
