@@ -4,15 +4,14 @@ import  * as types      from    './mutation-types'
 const   qs = require('qs')
 
 // 设置ContentType
-// axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded'
+axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded'
 
 // API获取侧导航列表
 export const getAPISideBarList = ( cbFunction ) => {
     axios.get('./static/api/viewAPI.json', {})
     .then(function( response ) {
         let getSideBarList = response.data.resultData
-        // console.dir(getSideBarList)
-        cbFunction( getSideBarList )        // callback() 回调函数; return res
+        cbFunction( getSideBarList )        // callback()
     })
     .catch(function( error ) {
         console.log(error)

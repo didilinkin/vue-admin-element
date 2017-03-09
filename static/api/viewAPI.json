@@ -4,6 +4,7 @@
     "resultData": [
         {
             "titleName": "收费管理",
+            "iconClass": "attach_money",
             "middle": [
                 {   
                     "canClick"  : false,
@@ -77,6 +78,7 @@
             ]
         }, {
             "titleName": "客户管理",
+            "iconClass": "person",
             "middle": [
                 {
                     "canClick"  : true,
@@ -112,6 +114,7 @@
             ]
         }, {
             "titleName": "房产管理",
+            "iconClass": "business",
             "middle":[
                 {
                     "canClick"  : false,
@@ -145,6 +148,7 @@
             ]
         }, {
             "titleName": "财务管理",
+            "iconClass": "poll",
             "middle": [
                 {
                     "canClick"  : false,
@@ -226,6 +230,7 @@
             ]
         }, {
             "titleName": "系统设置",
+            "iconClass": "settings_applications",
             "middle": [
                 {
                     "canClick"  : false,

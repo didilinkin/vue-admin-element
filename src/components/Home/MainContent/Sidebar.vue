@@ -1,134 +1,54 @@
-<template lang="pug">
-// 侧栏导航
-#sidebar
-    el-menu.el-menu-vertical-demo( default-active="2" @open="handleOpen" @close="handleClose" theme="dark" v-bind:unique-opened="true" )
-        // 一级导航 - 收费管理
-        el-submenu( index="1" )
-            template( slot="title" )
-                // i.el-icon-message
-                i.material-icons attach_money
-                span 收费管理
-            // 二级导航
-            el-submenu( index="1-1" )
-                template( slot="title" ) 租金管理
-                // toPageUrl( '#aaa' )  测试跳转事件
-                el-menu-item( index="1-1-1" @click="setBreadcrumbLevel( '收费管理', '租金管理', '应收查询' ); toPageUrl( 'RentQuery' ) "   ) 应收查询 
-                el-menu-item( index="1-1-2" @click="setBreadcrumbLevel( '收费管理', '租金管理', '租金记录' ); toPageUrl( 'RentRecord' ) " ) 租金记录
+<template>
+<!-- 侧栏导航 -->
+<div id="sidebar">
+    <el-menu default-active="2" class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose" theme="dark" :unique-opened="true" >
+        <!--
+        // 济南云适配
+        <el-submenu v-for="(menuGroup, key) in menuList" :index="menuGroup.name" :key="key">
+            <template slot="title">
+                <i :class="menuGroup.icon" class="fa"></i>
+                {{menuGroup.name}}
+            </template>
+            <el-menu-item v-for="(subMenu, subKey) in menuGroup.subMenu" :index="subMenu.path" :key="subKey">
+                {{subMenu.name}}
+            </el-menu-item>
+        </el-submenu>
+        -->
 
-            el-submenu( index="1-2" )
-                template( slot="title" ) 物业收费
-                el-menu-item( index="1-2-1" @click="setBreadcrumbLevel( '收费管理', '物业收费', '物业费查询' )" ) 物业费查询
-                el-menu-item( index="1-2-2" @click="setBreadcrumbLevel( '收费管理', '物业收费', '物业费记录' )" ) 物业费记录
+        <!-- 1级目录 -->
+        <el-submenu v-for=" ( item, key ) in dataSidebarList " v-bind:index=" item.titleName " v-bind:key="key" >
 
-            el-submenu( index="1-3" )
-                template( slot="title" ) 抄表电费
-                el-menu-item( index="1-3-1" @click="setBreadcrumbLevel( '收费管理', '抄表电费', '电费查询' )" ) 电费查询
-                el-menu-item( index="1-3-2" @click="setBreadcrumbLevel( '收费管理', '抄表电费', '电费记录' )" ) 电费记录
-                el-menu-item( index="1-3-3" @click="setBreadcrumbLevel( '收费管理', '抄表电费', '电费录入' )" ) 电费录入
-                el-menu-item( index="1-3-4" @click="setBreadcrumbLevel( '收费管理', '抄表电费', '峰平谷录入' )" ) 峰平谷录入
-
-            el-submenu( index="1-4" )
-                template( slot="title" ) 抄表水费
-                el-menu-item( index="1-4-1" @click="setBreadcrumbLevel( '收费管理', '抄表水费', '水费查询' )" ) 水费查询
-                el-menu-item( index="1-4-2" @click="setBreadcrumbLevel( '收费管理', '抄表水费', '水费记录' )" ) 水费记录
-                el-menu-item( index="1-4-3" @click="setBreadcrumbLevel( '收费管理', '抄表水费', '水表录入' )" ) 水表录入
-
-        // 一级导航 - 客户管理
-        el-submenu( index="2" )
-            template( slot="title" )
-                // i.el-icon-message
-                i.material-icons person
-                span 客户管理
-            // 二级导航
-            el-menu-item-group
-                el-menu-item( index="2-1" @click="setBreadcrumbLevel( '客户管理', '客户资料' )" ) 客户资料
-
-            el-menu-item-group
-                el-menu-item( index="2-2" @click="setBreadcrumbLevel( '客户管理', '合同管理' )" ) 合同管理
-
-            el-menu-item-group
-                el-menu-item( index="2-3" @click="setBreadcrumbLevel( '客户管理', '保证金管理' )" ) 保证金管理
-
-            el-submenu( index="2-4" )
-                template( slot="title" ) 门禁卡管理
-                el-menu-item( index="2-4-1" @click="setBreadcrumbLevel( '客户管理', '门禁卡管理', '门禁卡登记' )" ) 门禁卡登记
-                el-menu-item( index="2-4-2" @click="setBreadcrumbLevel( '客户管理', '门禁卡管理', '门禁卡押金' )" ) 门禁卡押金
-
-        // 一级导航 - 房产管理
-        el-submenu( index="3" )
-            template( slot="title" )
-                // i.el-icon-message
-                i.material-icons business
-                span 房产管理
-            // 二级导航
-            el-submenu( index="3-1" )
-                template( slot="title" ) 房间查询
-                el-menu-item( index="3-1-1" @click="setBreadcrumbLevel( '房产管理', '房间查询', '状态图示' )" ) 状态图示
-                el-menu-item( index="3-1-2" @click="setBreadcrumbLevel( '房产管理', '房间查询', '注册信息' )" ) 注册信息
-
-            el-submenu( index="3-2" )
-                template( slot="title" ) 房间管理
-                el-menu-item( index="3-1-1" @click="setBreadcrumbLevel( '房产管理', '房间管理', '房间管理' )" ) 房间管理
-                el-menu-item( index="3-1-2" @click="setBreadcrumbLevel( '房产管理', '房间管理', '楼宇管理' )" ) 楼宇管理
-
-        // 一级导航 - 财务管理
-        el-submenu( index="4" )
-            template( slot="title" )
-                // i.el-icon-message
-                i.material-icons poll
-                span 财务管理
-            // 二级导航
-            el-submenu( index="4-1" )
-                template( slot="title" ) 统计报表
-                el-menu-item( index="4-1-1" @click="setBreadcrumbLevel( '财务管理', '统计报表', '租金' )" ) 租金
-                el-menu-item( index="4-1-2" @click="setBreadcrumbLevel( '财务管理', '统计报表', '物业费' )" ) 物业费
-                el-menu-item( index="4-1-3" @click="setBreadcrumbLevel( '财务管理', '统计报表', '抄表电费' )" ) 抄表电费
-                el-menu-item( index="4-1-4" @click="setBreadcrumbLevel( '财务管理', '统计报表', '抄表水费' )" ) 抄表水费
-
-            el-submenu( index="4-2" )
-                template( slot="title" ) 租赁审核
-                el-menu-item( index="4-2-1" @click="setBreadcrumbLevel( '财务管理', '租赁审核', '租金审核' )" ) 租金审核
-                el-menu-item( index="4-2-2" @click="setBreadcrumbLevel( '财务管理', '租赁审核', '租金审核记录' )" ) 租金审核记录
-                el-menu-item( index="4-2-3" @click="setBreadcrumbLevel( '财务管理', '租赁审核', '保证金审核' )" ) 保证金审核
-
-            el-submenu( index="4-3" )
-                template( slot="title" ) 物业审核
-                el-menu-item( index="4-3-1" @click="setBreadcrumbLevel( '财务管理', '物业审核', '电费审核' )" ) 电费审核
-                el-menu-item( index="4-3-2" @click="setBreadcrumbLevel( '财务管理', '物业审核', '水费审核' )" ) 水费审核
-                el-menu-item( index="4-3-3" @click="setBreadcrumbLevel( '财务管理', '物业审核', '物业费审核' )" ) 物业费审核
-                el-menu-item( index="4-3-4" @click="setBreadcrumbLevel( '财务管理', '物业审核', '保证金审核' )" ) 保证金审核
-
-            el-submenu( index="4-4" )
-                template( slot="title" ) 财务设置
-                el-menu-item( index="4-4-1" @click="setBreadcrumbLevel( '财务管理', '财务设置', '收费设置' )" ) 收费设置
-                el-menu-item( index="4-4-2" @click="setBreadcrumbLevel( '财务管理', '财务设置', '开票信息' )" ) 开票信息
-
-        // 一级导航 - 系统设置
-        el-submenu( index="系统设置" )
-            template( slot="title" )
-                // i.el-icon-message
-                i.material-icons settings_applications
-                span 系统设置
-            // 二级导航
-            el-submenu( index="权限管理" )
-                template( slot="title" ) 权限管理
-                el-menu-item( index="角色管理" @click="setBreadcrumbLevel( '系统设置', '权限管理', '角色管理' )" ) 角色管理
-                el-menu-item( index="部门管理" @click="setBreadcrumbLevel( '系统设置', '权限管理', '部门管理' )" ) 部门管理
-
-            el-menu-item-group
-                el-menu-item( index="数据字典" @click="setBreadcrumbLevel( '系统设置', '数据字典' )" ) 数据字典
-
-            el-menu-item-group
-                el-menu-item( index="操作日志" @click="setBreadcrumbLevel( '系统设置', '操作日志' )" ) 操作日志
-    // 技术支持
-    .copyright 青岛上朝科技
+            <template slot="title">
+                <i class="material-icons"> {{ item.iconClass }} </i>
+                {{ item.titleName }}
+            </template>
+            <!-- 2级目录 -->
+            <el-submenu v-for=" ( itemMiddle, keyMiddle ) in item.middle " v-bind:index=" itemMiddle.titleName " v-bind:key=" keyMiddle ">
+                {{ itemMiddle.titleName }}
+                <!-- 3级目录  -->
+            </el-submenu>
+        </el-submenu>
+    </el-menu>
+</div>
 </template>
 
 <script>
 import  { mapActions, mapGetters }  from    'vuex'
 
 export default {
+    data() {
+        return {
+            dataSidebarList: []
+        }
+    },
+    mounted: function() {
+        this.testLog()
+    },
     methods: {
+        // 测试this 是否接收到 props
+        testLog() {
+            console.log( this.dataSidebarList )
+        },
         handleOpen( key, keyPath ) {
             // console.log( key, keyPath )
             // console.log('打开' + key + keyPath)
@@ -156,6 +76,16 @@ export default {
         // 目的: 跳转url, 渲染相应的路由组件
         toPageUrl( linkUrl ) {
             location.href='#/' + linkUrl
+        }
+    },
+    computed: mapGetters({
+        get_sideBarList     : 'get_sideBarList'
+    }),
+    watch: {
+        // 监听: 返回用户侧导航栏列表
+        get_sideBarList: function() {
+            this.$data.dataSidebarList = this.$store.state.viewState.sideBarList
+            // console.log( this.$data.data_sidebarList )
         }
     }
 }

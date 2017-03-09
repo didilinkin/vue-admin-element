@@ -2,6 +2,7 @@
 #mainContent
     // 左侧栏
     .main--sidebar
+        // 将返回值通过props传递给 侧导航栏组件
         Sidebar
 
     // 右内容路由模版( 面包屑 + 路由内容 )
@@ -11,6 +12,8 @@
 </template>
 
 <script>
+import  { mapGetters }  from    'vuex'
+
 import Sidebar                  from '@/components/Home/MainContent/Sidebar'
 import Breadcrumb               from '@/components/Home/MainContent/Breadcrumb'
 const components = { Sidebar, Breadcrumb }
