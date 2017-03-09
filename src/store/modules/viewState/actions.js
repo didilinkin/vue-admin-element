@@ -1,4 +1,5 @@
-import viewAPI          from    './api'
+// import viewAPI          from    './api'
+import  * as viewAPI    from    './api'
 import  * as types      from    './mutation-types'
 
 export default{
