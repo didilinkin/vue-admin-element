@@ -5,9 +5,8 @@
         {
             "titleName": "收费管理",
             "iconClass": "attach_money",
-            "middle": [
-                {   
-                    "canClick"  : false,
+            "middleSubMenu": [
+                {
                     "titleName" : "租金管理",
                     "bottom"    : [
                         {
@@ -21,7 +20,6 @@
                         }
                     ]
                 }, {
-                    "canClick"  : false,
                     "titleName" : "物业收费",
                     "bottom"    : [
                         {
@@ -35,7 +33,6 @@
                         }
                     ]
                 }, {
-                    "canClick"  : false,
                     "titleName" : "抄表电费",
                     "bottom"    : [
                         {
@@ -57,7 +54,6 @@
                         }
                     ]
                 }, {
-                    "canClick"  : false,
                     "titleName" : "抄表水费",
                     "bottom"    : [
                         {
@@ -79,25 +75,23 @@
         }, {
             "titleName": "客户管理",
             "iconClass": "person",
-            "middle": [
+            "middleLink": [
                 {
-                    "canClick"  : true,
                     "titleName" : "客户资料",
                     "url"       : "CustomerInformation",
-                    "breadcrumb"    : [ "客户管理", "客户资料" ]
-                    
+                    "breadcrumb": [ "客户管理", "客户资料" ]
                 }, {
-                    "canClick"  : true,
                     "titleName" : "合同管理",
                     "url"       : "ContractManagement",
-                    "breadcrumb"    : [ "客户管理", "合同管理" ] 
+                    "breadcrumb": [ "客户管理", "合同管理" ]
                 }, {
-                    "canClick"  : true,
                     "titleName" : "保证金管理",
                     "url"       : "MarginManagement",
                     "breadcrumb": [ "客户管理", "保证金管理" ]
-                }, {
-                    "canClick"  : false,
+                }
+            ],
+            "middleSubMenu": [
+                {
                     "titleName" : "门禁卡管理",
                     "bottom"    : [
                         {
@@ -115,9 +109,8 @@
         }, {
             "titleName": "房产管理",
             "iconClass": "business",
-            "middle":[
+            "middleSubMenu" : [
                 {
-                    "canClick"  : false,
                     "titleName" : "房间查询",
                     "bottom"    : [
                         {
@@ -131,7 +124,6 @@
                         }
                     ]
                 }, {
-                    "canClick"  : false,
                     "titleName" : "房间管理",
                     "bottom"    : [
                         {
@@ -149,9 +141,8 @@
         }, {
             "titleName": "财务管理",
             "iconClass": "poll",
-            "middle": [
+            "middleSubMenu" :   [
                 {
-                    "canClick"  : false,
                     "titleName" : "统计报表",
                     "bottom"    : [
                         {
@@ -171,9 +162,8 @@
                             "url"           : "WaterFee",
                             "breadcrumb"    : [ "财务管理", "统计报表", "抄表水费" ]
                         }
-                    ]
+                    ]                       
                 }, {
-                    "canClick"  : false,
                     "titleName" : "租赁审核",
                     "bottom"    : [
                         {
@@ -191,7 +181,6 @@
                         }
                     ]
                 }, {
-                    "canClick"  : false,
                     "titleName" : "物业审核",
                     "bottom"    : [
                         {
@@ -213,7 +202,6 @@
                         }
                     ]
                 }, {
-                    "canClick"  : false,
                     "titleName" : "财务设置",
                     "bottom"    : [
                         {
@@ -231,9 +219,19 @@
         }, {
             "titleName": "系统设置",
             "iconClass": "settings_applications",
-            "middle": [
+            "middleLink": [
                 {
-                    "canClick"  : false,
+                    "titleName" : "数据字典",
+                    "url"       : "DataDictionary",
+                    "breadcrumb": [ "系统设置", "数据字典" ]
+                }, {
+                    "titleName" : "操作日志",
+                    "url"       : "OperationLog",
+                    "breadcrumb": [ "系统设置", "操作日志" ]
+                }
+            ],
+            "middleSubMenu": [
+                {
                     "titleName" : "权限管理",
                     "bottom"    : [
                         {
@@ -246,16 +244,6 @@
                             "breadcrumb"    : [ "系统设置", "权限管理", "部门管理" ]
                         }
                     ]
-                }, {
-                    "canClick"  : true,
-                    "titleName" : "数据字典",
-                    "url"       : "DataDictionary",
-                    "breadcrumb"    : [ "系统设置", "数据字典" ]
-                }, {
-                    "canClick"  : true,
-                    "titleName" : "操作日志",
-                    "url"       : "OperationLog",
-                    "breadcrumb"    : [ "系统设置", "操作日志" ]
                 }
             ]
         }
