@@ -7,15 +7,13 @@
             template( slot="title" )
                 i.material-icons {{ item.iconClass }}
                 span {{ item.titleName }}
-
-            // 2级导航( 2级点击 )
-            el-menu-item-group( v-for="( itemMiddleLink, keyMiddleLink ) in item.middleLink" v-bind:index="itemMiddleLink.titleName" v-bind:key="keyMiddleLink" )
-                el-menu-item( v-bind:index="itemMiddleLink.titleName" @click="clickSidebar( itemMiddleLink.breadcrumb, itemMiddleLink.url )" ) {{ itemMiddleLink.titleName }}
-
             // 2级导航( 3级点击 )
             el-submenu(  v-for="( itemMiddleSubMenu, keyMiddleSubMenu ) in item.middleSubMenu"  v-bind:index="itemMiddleSubMenu.titleName" v-bind:key="keyMiddleSubMenu" )
                 template( slot="title" ) {{ itemMiddleSubMenu.titleName }}
                 el-menu-item( v-for="( itemBottom, keyBottom ) in itemMiddleSubMenu.bottom" v-bind:index="itemBottom.titleName" v-bind:key="keyBottom" @click="clickSidebar( itemBottom.breadcrumb, itemBottom.url )" ) {{ itemBottom.titleName }}
+            // 2级导航( 2级点击 )
+            el-menu-item-group( v-for="( itemMiddleLink, keyMiddleLink ) in item.middleLink" v-bind:index="itemMiddleLink.titleName" v-bind:key="keyMiddleLink" )
+                el-menu-item( v-bind:index="itemMiddleLink.titleName" @click="clickSidebar( itemMiddleLink.breadcrumb, itemMiddleLink.url )" ) {{ itemMiddleLink.titleName }}
 </template>
 
 <script>
@@ -27,37 +25,12 @@ export default {
             dataSidebarList: []
         }
     },
-    mounted: function() {
-        // this.testLog()
-    },
     methods: {
-        // 测试this 是否接收到 props
-        // testLog() {
-        //     console.log( this.dataSidebarList )
-        // },
         handleOpen( key, keyPath ) {
             // console.log( key, keyPath )
-            // console.log('打开' + key + keyPath)
         },
         handleClose( key, keyPath ) {
             // console.log( key, keyPath )
-            // console.log('关闭' + key + keyPath)
-        },
-        // 目的: 改变面包屑层级状态( 缺省参数 )
-        setBreadcrumbLevel() {
-            let argumentsLength = arguments.length,                         // 参数个数
-                argumentsArr    = []                                        // 存放参数对象( 作为参数: 触发actions事件 )
-
-            for( let i=0; i<argumentsLength; i++ ) {
-                let argumentsObj    = new Object
-                argumentsObj['levelName'] = arguments[i]
-                argumentsArr.push( argumentsObj )
-            }
-            // 派发任务( 将argumentsObj对象发给actions )
-            this.$store.dispatch({
-                type    : 'setBreadcrumbLevel',
-                attrObj : argumentsArr
-            })
         },
         // 目的: 跳转url, 渲染相应的路由组件
         toPageUrl( linkUrl ) {
@@ -89,7 +62,6 @@ export default {
         // 监听: 返回用户侧导航栏列表
         get_sideBarList: function() {
             this.$data.dataSidebarList = this.$store.state.viewState.sideBarList
-            // console.log( this.$data.data_sidebarList )
         }
     }
 }
