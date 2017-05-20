@@ -3,17 +3,39 @@
 #sidebar
     el-menu.el-menu-vertical-demo( default-active="2" @open="handleOpen" @close="handleClose" theme="dark" v-bind:unique-opened= "true"  )
         // 1级导航
-        el-submenu( v-for="( item, key ) in dataSidebarList" v-bind:index="item.titleName" v-bind:key="key" )
+        el-submenu(
+            v-for="( item, key ) in dataSidebarList" 
+            v-bind:index="item.titleName" 
+            v-bind:key="key"
+        )
             template( slot="title" )
                 i.material-icons {{ item.iconClass }}
                 span {{ item.titleName }}
-            // 2级导航( 3级点击 )
-            el-submenu(  v-for="( itemMiddleSubMenu, keyMiddleSubMenu ) in item.middleSubMenu"  v-bind:index="itemMiddleSubMenu.titleName" v-bind:key="keyMiddleSubMenu" )
+
+            // 2级导航( 3级可点击 )
+            el-submenu(
+                v-for="( itemMiddleSubMenu, keyMiddleSubMenu ) in item.middleSubMenu"
+                v-bind:index="itemMiddleSubMenu.titleName" 
+                v-bind:key="keyMiddleSubMenu"
+            )
                 template( slot="title" ) {{ itemMiddleSubMenu.titleName }}
-                el-menu-item( v-for="( itemBottom, keyBottom ) in itemMiddleSubMenu.bottom" v-bind:index="itemBottom.titleName" v-bind:key="keyBottom" @click="clickSidebar( itemBottom.breadcrumb, itemBottom.url )" ) {{ itemBottom.titleName }}
+                el-menu-item(
+                    v-for="(itemBottom, keyBottom ) in itemMiddleSubMenu.bottom" 
+                    v-bind:index="itemBottom.titleName" 
+                    v-bind:key="keyBottom" 
+                    @click="clickSidebar( itemBottom.breadcrumb, itemBottom.url )"
+                ) {{ itemBottom.titleName }}
+
             // 2级导航( 2级点击 )
-            el-menu-item-group( v-for="( itemMiddleLink, keyMiddleLink ) in item.middleLink" v-bind:index="itemMiddleLink.titleName" v-bind:key="keyMiddleLink" )
-                el-menu-item( v-bind:index="itemMiddleLink.titleName" @click="clickSidebar( itemMiddleLink.breadcrumb, itemMiddleLink.url )" ) {{ itemMiddleLink.titleName }}
+            el-menu-item-group(
+                v-for="( itemMiddleLink, keyMiddleLink ) in item.middleLink" 
+                v-bind:index="itemMiddleLink.titleName" 
+                v-bind:key="keyMiddleLink"
+            )
+                el-menu-item(
+                    v-bind:index="itemMiddleLink.titleName" 
+                    @click="clickSidebar( itemMiddleLink.breadcrumb, itemMiddleLink.url )"
+                ) {{ itemMiddleLink.titleName }}
 </template>
 
 <script>
