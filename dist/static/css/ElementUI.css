@@ -1,0 +1,29 @@
+/* 最高权重 强调样式 - 用于抵消默认样式 */
+
+/* 顶部导航 - 下拉导航图标 -> 将其隐藏 */
+#headerNav .el-submenu__icon-arrow {
+    display: none;
+}
+
+/* 顶部导航 - 下拉导航 右上角数量标记 -> 隐藏btn */
+#headerNav .el-badge >button {
+    display: none;
+}
+
+/* 顶部导航 - 下拉导航 右上角数量标记 -> 控制位置, 隐藏边框  */
+#headerNav .el-badge__content.is-fixed{
+    top: -12px;
+    right: -10px;
+    height: 16px;
+    line-height: 16px;
+    border: none;
+    z-index: 2;
+}
+/* 顶部导航 - 下拉导航 -> 图标居中 */
+#headerNav .el-submenu__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 30px;
+    margin: 0 5px;
+}

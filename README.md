@@ -2,6 +2,8 @@
 
 > 上朝科技 - 后台管理系统 - Element-UI 框架
 
+# 特别提醒: `yarn run dev` 前, 请先使用 `yarn run build` 打包一下; 然后再使用 `yarn run dev` 进行测试
+
 ## Technology
 | 技术名称                                                                                          | 作用                  |  版本  |
 | --------                                                                                          | -----:                | :----:  |
