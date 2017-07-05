@@ -2,7 +2,10 @@
 
 > 上朝科技 - 后台管理系统 - Element-UI 框架
 
-# 特别提醒: `yarn run dev` 前, 请先使用 `yarn run build` 打包一下; 然后再使用 `yarn run dev` 进行测试
+### 特别提醒(需要将静态测试的json数据输出到dist文件夹):
+
+* `yarn run dev` 前, 请先使用 `yarn run build` 打包一下;
+* 然后再使用 `yarn run dev` 进行测试
 
 ## Technology
 | 技术名称                                                                                          | 作用                  |  版本  |
@@ -37,11 +40,12 @@ For detailed explanation on how things work, checkout the [guide](http://vuejs-t
 
 ## IDE option
 
-本项目使用`ESlint`统一规范JS, 但未置入`webpack`配置中, 只做本地纠错提示
-
 推荐安装`ESlint`并使用 `VS code`编辑器等支持`ESlint`的IDE
 
 ## ToDoList
+
+* 重构样式
+* 制作静态演示页面
 
 
 
