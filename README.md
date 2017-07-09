@@ -1,6 +1,8 @@
 # shangchao-admin-element-ui
 
 > 上朝科技 - 后台管理系统 - Element-UI 框架
+>
+> 静态演示页面: [http://yanxiaodi.coding.me/Element-admin/#/](http://yanxiaodi.coding.me/Element-admin/#/)
 
 ### 特别提醒(需要将静态测试的json数据输出到dist文件夹):
 
