@@ -1,53 +1,52 @@
-# shangchao-admin-element-ui
+# vue-admin-element
 
-> 上朝科技 - 后台管理系统 - Element-UI 框架
->
-> 静态演示页面: [http://yanxiaodi.coding.me/Element-admin/#/](http://yanxiaodi.coding.me/Element-admin/#/)
+This template should help get you started developing with Vue 3 in Vite.
 
-### 特别提醒(需要将静态测试的json数据输出到dist文件夹):
+## Recommended IDE Setup
 
-* `yarn run dev` 前, 请先使用 `yarn run build` 打包一下;
-* 然后再使用 `yarn run dev` 进行测试
+[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
 
-## Technology
-| 技术名称                                                                                          | 作用                  |  版本  |
-| --------                                                                                          | -----:                | :----:  |
-| [Vuejs](http://cn.vuejs.org/)                                                                     | 框架                  |   2.2.1 |
-| [Vue-Router](http://router.vuejs.org/zh-cn/)                                                      | Vue路由               |  2.3.0 |
-| [Vuex](https://vuex.vuejs.org/zh-cn/)                                                             | Vue状态管理           |  2.2.1 |
-| [Axios](https://ykloveyxk.github.io/2017/02/25/axios%E5%85%A8%E6%94%BB%E7%95%A5/#more)            | 交互处理              |  0.15.3 |
-| [Element UI](http://element.eleme.io/#/zh-CN)                                                     | UI框架                |  1.2.1  |
-| [Pug](https://pugjs.org/zh-cn/api/getting-started.html)                                           | Node模版              |  2.0.0-beta11  |
-| [Sass](http://www.sass-zh.com/)                                                                   | 样式预处理            |  4.5.0  |
-| [Webpack](http://webpackdoc.com/)                                                                 | 模块打包              |  2.2.1  |
-| [Yarn](https://yarnpkg.com/zh-Hans/)                                                              | 依赖管理              |  0.20.3  |
-| [Google Material-Icons](https://material.io/icons/)                                               | 图标字体              |  2.1.3  |
-## Build Setup
+## Type Support for `.vue` Imports in TS
 
-``` bash
-#安装依赖
+TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+
+If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+
+1. Disable the built-in TypeScript Extension
+    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
+    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
+2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+
+## Customize configuration
+
+See [Vite Configuration Reference](https://vitejs.dev/config/).
+
+## Project Setup
+
+```sh
 npm install
-
-# 在localhost:8080 开启热加载功能
-npm run dev
-
-# 打包生产模式,缩小压缩包
-npm run build
-
-# 打包生产模式,缩小压缩包 -- 查看包分析报告
-npm run build --report
 ```
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+### Compile and Hot-Reload for Development
 
-## IDE option
+```sh
+npm run dev
+```
 
-推荐安装`ESlint`并使用 `VS code`编辑器等支持`ESlint`的IDE
+### Type-Check, Compile and Minify for Production
 
-## ToDoList
+```sh
+npm run build
+```
 
-* 重构样式
-* 制作静态演示页面
+### Run Unit Tests with [Vitest](https://vitest.dev/)
 
+```sh
+npm run test:unit
+```
 
+### Lint with [ESLint](https://eslint.org/)
 
+```sh
+npm run lint
+```
