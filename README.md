@@ -42,6 +42,6 @@ npm run lint
 
 ## TODO
 
-- [*] [Pug](https://github.com/vitejs/vite/issues/17)
-- [*] [Stylus](https://www.stylus-lang.cn/)
+- [x] [Pug](https://github.com/vitejs/vite/issues/17)
+- [x] [Stylus](https://www.stylus-lang.cn/)
 - [] [element](https://element-plus.gitee.io/zh-CN/)

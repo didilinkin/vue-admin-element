@@ -1,6 +1,10 @@
 <template lang="pug">
 .about
   h1 This is an about page
+
+  el-button 中文
+
+  el-button(type="primary") Default
 </template>
 
 <style lang="stylus">
