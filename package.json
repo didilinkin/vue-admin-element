@@ -11,6 +11,9 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
   },
   "dependencies": {
+    "@element-plus/icons-vue": "^2.0.6",
+    "@icon-park/vue-next": "^1.4.2",
+    "@vueuse/core": "^9.0.0",
     "element-plus": "^2.2.10",
     "pinia": "^2.0.16",
     "vue": "^3.2.37",

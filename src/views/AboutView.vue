@@ -15,7 +15,7 @@ import { RouterLink } from "vue-router"
   RouterLink(to="/") Home
 </template>
 
-<style lang="stylus">
+<!-- <style lang="stylus">
 @media (min-width 1024px)
   .about
     min-height 100vh
@@ -23,4 +23,4 @@ import { RouterLink } from "vue-router"
     align-items center
     h1
       color red
-</style>
+</style> -->
